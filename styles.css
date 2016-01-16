@@ -7,15 +7,19 @@ Dark yellow = #785616
 
 body {
     font-family: 'Arial', sans-serif;
-    color: ;
+    font-size: .85em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
 }
 /*Tried to do body { margin 960px and it broke my floats*/
 nav {
     background: #FFB4B0;
     border: 2px solid black;
+    margin: 0 auto;
     margin-bottom: 10px;
     height: 30px;
-    max-width: 83.5%;
+    width: 99%%;
 }
 
 nav li {
@@ -27,44 +31,78 @@ nav li {
 }
 
 .formSelector {
+    box-sizing: border-box;
+    box-sizing: content-box;
     float: left;
+    margin: 0 auto;
     background: #4DD7FA;
     border: 2px solid black;
-    max-width: 180px;
-    padding: 6px;
-    margin-right: 10px;
-    height: 378px;
+    min-width: 180px;
+    padding: .5%;
+    margin-right: .5%;
+    height: 382px;
+    width: 20%;
 }
+.formSelectorContent {
 
+}
 .songLength {
-    /*display: block;*/
+    display: block;
+    width: 95%;
 }
 
 .dropDown input{
     display: block;
     margin-bottom: 3px;
+    width: 95%;
 }
 
 .checkBox {
     margin-top: 10px;
 }
-.songInfoBox {
-    background: #FEFAC0;
-    width: 400px;
-    max-width: 100%;
-    border: 2px solid black;
-    padding: 0 0 20px 20px;
-    margin-left: 10px;
+
+.checkBoxLabel {
+    margin-top: 15px;
+    margin-bottom: 5px;
+
+}
+.checkBoxLeft {
     float: left;
+    line-height: 2;
+}
+
+.checkBoxRight {
+    float: right;
+    line-height: 2;
+}
+
+.filterbutton {
+    clear: both;
+    margin: 1% 5% auto;
 }
 
 .filter {
+    
     text-align: center;
     width: 100px;
     background-color: lightgrey;
     border: 2px solid black;
     border-radius: 5px;
 }
+.songInfoBox {
+    /*box-sizing: border-box;*/
+    /*box-sizing: content-box;*/
+    background: #FEFAC0;
+    margin: 0 auto;
+    /*max-width: */
+    border: 2px solid black;
+    padding: 0 0 20px 20px;
+    margin-left: 2%;
+    float: left;
+    width: 70%;
+    height: 394px;
+}
+
 
 .songInfoBox h2 {
     color: #785616;
