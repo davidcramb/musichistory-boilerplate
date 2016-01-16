@@ -1,13 +1,71 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
+    <nav>
+        <ul>
+            <li><a href="#">View Music</a></li>
+            <li><a href="#">Add Music</a></li>
+            <li><a href="#">Profile</a></li>
+        </ul>
+    </nav>
 
+    <div class="formSelector"> 
+        <form action=" ">
+            <div class="songLength">
+                <label for="length">Song Length:</label>
+                <br>
+                <input type="range">
+            </div>
+            <div class="dropDown">
+                <label for="artist">Artist:</label>
+                <input type="select">
+                <br>
+                <label for="album">Album:</label>
+                <input type="select">
+            </div>
+            <div class="checkBox">
+                <label for="genre">Genre:</label>
+                <br>
+                <input type="checkbox">Rock <span><input type="checkbox">Pop</span><input type="checkbox">Blues <span><input type="checkbox">Classical</span><input type="checkbox">Hip hop <span><input type="checkbox">Jazz</span>
+            </div>
+            <p class="filter">
+                Filter
+            </p>
+            </form>        
+    </div>
+    <!-- Song Information includes Song Title Header in H2, followed by artist, album, genre -->
+    <div class="songInfoBox"> 
+        <div class="song">
+            <h2 class="songTitle">Song Name</h2>
+            <p>Artist name</p>
+            <p>Album name</p>
+            <p>Genre</p> 
+        </div>
+        <div class="song">
+            <h2 class="songTitle">Song Name</h2>
+            <p>Artist name</p>
+            <p>Album name</p>
+            <p>Genre</p> 
+        </div>
+        <div class="song">
+            <h2 class="songTitle">Song Name</h2>
+            <p>Artist name</p>
+            <p>Album name</p>
+            <p>Genre</p> 
+        </div>
+            <div class="song">
+            <h2 class="songTitle">Song Name</h2>
+            <p>Artist name</p>
+            <p>Album name</p>
+            <p>Genre</p> 
+        </div>
 
+    </div>
 </body>
 </html>

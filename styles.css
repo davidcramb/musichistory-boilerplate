@@ -1,0 +1,78 @@
+/*
+Red = #FFB4B0  
+Blue = #4DD7FA  
+Light yellow = #FEFAC0  
+Dark yellow = #785616
+*/
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: ;
+}
+/*Tried to do body { margin 960px and it broke my floats*/
+nav {
+    background: #FFB4B0;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    height: 30px;
+    max-width: 83.5%;
+}
+
+nav li {
+    
+    list-style-type: none;
+    float: left;
+    border-right: 5px;
+    margin: -8px 10px 2px 5px;
+}
+
+.formSelector {
+    float: left;
+    background: #4DD7FA;
+    border: 2px solid black;
+    max-width: 180px;
+    padding: 6px;
+    margin-right: 10px;
+    height: 378px;
+}
+
+.songLength {
+    /*display: block;*/
+}
+
+.dropDown input{
+    display: block;
+    margin-bottom: 3px;
+}
+
+.checkBox {
+    margin-top: 10px;
+}
+.songInfoBox {
+    background: #FEFAC0;
+    width: 400px;
+    max-width: 100%;
+    border: 2px solid black;
+    padding: 0 0 20px 20px;
+    margin-left: 10px;
+    float: left;
+}
+
+.filter {
+    text-align: center;
+    width: 100px;
+    background-color: lightgrey;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.songInfoBox h2 {
+    color: #785616;
+    font-size: 26px;
+    font-weight: 200;
+}
+
+.song p {
+    display: inline;
+    
+}
