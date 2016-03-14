@@ -37,6 +37,8 @@ nav li {
 /*FLEXBOS CONTAINER*/
 .formSelector {
     display: inline-flex;
+    flex: 0 1 auto;
+    align-self: flex-start;
     order: 1;
     margin: 0 auto;
     background: #4DD7FA;
@@ -51,6 +53,7 @@ nav li {
 .songInfoBox {
     display: inline-flex;
     flex-direction: column;
+    flex-shrink: 1;
     order: 2;
     background: #FEFAC0;
     margin: 0 auto;
