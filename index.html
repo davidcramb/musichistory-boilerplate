@@ -15,6 +15,7 @@
             <li><a href="#">Profile</a></li>
         </ul>
     </nav>
+    <div id="listMusicView">
     <div class="formSelector"> 
         <form action=" ">
 
@@ -49,8 +50,8 @@
                 </div>
             </div>                                    <!--End of checkBox-->
 
-            <div class="filterbutton">
-                <p class="filter">Filter</p>
+            <div id="filterbutton">
+                <p id="filter">Filter</p>
             </div>
             </form>        
     </div>
@@ -58,8 +59,9 @@
     <div id="songInfoBox"> 
 
     </div>                                            <!-- End songInfoBox -->
+    </div>                                            <!-- End listMusicView -->
     
-    <div id="addNew">
+    <div id="addMusicView" class="hidden">
         <label for="addSong">Song:</label>
             <input type="text" name="addSong" id="addSong">
         <label for="addArtist">Artist:</label>
@@ -67,7 +69,7 @@
         <label for="addAlbum">Album:</label>
             <input type="text" name="addAlbum" id="addAlbum">
         <button id="add">Add</button>
-    </div>                                             <!-- End of addNew Div -->
+    </div>                                             <!-- End of addMusicView Div -->
 
     </div> <!-- End of Container Div -->
     <script src="songs.js"></script>
