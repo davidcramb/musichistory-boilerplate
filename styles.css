@@ -1,9 +1,4 @@
-/*
-Red = #FFB4B0  
-Blue = #4DD7FA  
-Light yellow = #FEFAC0  
-Dark yellow = #785616
-*/
+
 
 body {
     font-family: 'Arial', sans-serif;
@@ -12,15 +7,7 @@ body {
     margin-right: auto;
     max-width: 960px;
 }
-/*Tried to do body { margin 960px and it broke my floats*/
-nav {
-    background: #FFB4B0;
-    border: 2px solid black;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    height: 30px;
-    width: 99%%;
-}
+
 
 nav li {
     
@@ -34,7 +21,16 @@ nav li {
     display: flex;
     flex-direction: row;
 }
-/*FLEXBOS CONTAINER*/
+/*FLEXBOX CONTAINER*/
+nav {
+    background: #FFB4B0;
+    border: 2px solid black;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 99%%;
+}
+/*FLEXBOX CONTAINER*/
 .formSelector {
     display: inline-flex;
     flex: 0 1 auto;
@@ -46,11 +42,11 @@ nav li {
     min-width: 180px;
     padding: .5%;
     margin-right: .5%;
-    height: 382px;
+    height: auto;
     width: 20%;
 }
 /*FLEXBOX CONTAINER*/
-.songInfoBox {
+#songInfoBox {
     display: inline-flex;
     flex-direction: column;
     flex-shrink: 1;
@@ -61,7 +57,7 @@ nav li {
     padding: 0 0 20px 20px;
     margin-left: 2%;
     width: 70%;
-    height: 394px;
+    height: auto;
 }
 .song {
 
@@ -117,7 +113,3 @@ nav li {
     font-weight: 200;
 }
 
-.song p {
-    display: inline;
-    
-}

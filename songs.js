@@ -6,23 +6,34 @@ songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album Th
 songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction";
 songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
 
-function addSongtoEnd (songarray, newsong) {
-  songarray.push(newsong)
+function addSongtoEnd (songarray, newSong, newArtist, newAlbum) {
+  songarray.push(newSong + ' - by ' + newArtist + ' on the album ' + newAlbum)
 };
 
-function addSongtoBeginning (songarray, newsong){
-  songarray.unshift(newsong)
+function addSongtoBeginning (songarray, newSong, newArtist, newAlbum){
+  songarray.unshift(newSong + ' - by ' + newArtist + ' on the album ' + newAlbum)
 }
-addSongtoBeginning (songs, "My Humps by The Black Eye Peas");
+// addSongtoBeginning (songs, "My Humps - by The Black Eye Peas");
 
-addSongtoEnd(songs, "Under the Bridge by Red Hot Chili Peppers");
+// addSongtoEnd(songs, "Under the Bridge - by Red Hot Chili Peppers");
 
 function removeCrap (crap) {
-  console.log()
+   songs = [];
    for (var i = 0; i < crap.length; i ++){
-    var toString = crap[i].replace(/[!@##$%^&*()><]/g,"")
-    console.log(toString)
-
-  }
+    var replaced = crap[i].replace(/[!@##$%^&*()]/g,"").replace(/[>]/g,"-");
+    songs.push(replaced);
+    };
+  addSongtoEnd(songs, "Bridge", "Red Hot Chili Peppers", "Californication");
+  addSongtoBeginning(songs, "Breathe", "The Prodigy", "Fat of the Land");
 };
-removeCrap(songs)
+removeCrap(songs);
+
+function addSongsToDOM (songs) {
+  var DOMOutput = document.getElementById('songInfoBox')
+    for (i in songs) {
+      var songTitle = songs[i].split(" - ")[0];
+      DOMOutput.innerHTML += `<h2 class="songName">${songTitle}</h2>`;
+      DOMOutput.innerHTML += `${songs[i]}`;
+    };
+};
+addSongsToDOM(songs);
