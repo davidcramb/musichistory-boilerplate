@@ -16,13 +16,13 @@ function addSongtoBeginning (songarray, newSong, newArtist, newAlbum){
 // addSongtoBeginning (songs, "My Humps - by The Black Eye Peas");
 
 // addSongtoEnd(songs, "Under the Bridge - by Red Hot Chili Peppers");
-
+//Removes the garbage from the original songs array.
 function removeCrap (crap) {
-   songs = [];
-   for (var i = 0; i < crap.length; i ++){
+  songs = [];
+  for (var i = 0; i < crap.length; i ++){
     var replaced = crap[i].replace(/[!@##$%^&*()]/g,"").replace(/[>]/g,"-");
     songs.push(replaced);
-    };
+  };
   addSongtoEnd(songs, "Bridge", "Red Hot Chili Peppers", "Californication");
   addSongtoBeginning(songs, "Breathe", "The Prodigy", "Fat of the Land");
 };

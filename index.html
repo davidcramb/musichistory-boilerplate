@@ -10,68 +10,65 @@
     <div id="container">
     <nav>
         <ul>
-            <li><a href="#">View Music</a></li>
+            <li><a href="#">List Music</a></li>
             <li><a href="#">Add Music</a></li>
             <li><a href="#">Profile</a></li>
         </ul>
     </nav>
     <div class="formSelector"> 
         <form action=" ">
+
             <div class="songLength">
                 <label for="length">Song Length:</label>
                 <br>
                 <input type="range">
-            </div>
+            </div>                                   <!--End of songLength -->
+
             <div class="dropDown">
                 <label for="artist">Artist:</label>
                 <input type="select">
                 <br>
                 <label for="album">Album:</label>
                 <input type="select">
-            </div>
+            </div>                                   <!--End of dropDown -->
+
             <div class="checkBox">
-                <div class="checkBoxLabel"
-                <label for="genre">Genre:</label>
+                <div class="checkBoxLabel">
+                    <label for="genre">Genre:</label>
                 </div>
                 <br>
                 <div class="checkBoxLeft">
-                <input type="checkbox">Rock <br>
-                <input type="checkbox">Pop <br>
-                <input type="checkbox">Blues <br>
+                    <input type="checkbox">Rock <br>
+                    <input type="checkbox">Pop <br>
+                    <input type="checkbox">Blues <br>
                 </div>
                 <div class="checkBoxRight">
-                <input type="checkbox">Classical<br>
-                <input type="checkbox">Hip hop <br>
-                <input type="checkbox">Jazz <br>
+                    <input type="checkbox">Classical<br>
+                    <input type="checkbox">Hip hop <br>
+                    <input type="checkbox">Jazz <br>
                 </div>
-            </div>
+            </div>                                    <!--End of checkBox-->
+
             <div class="filterbutton">
-            <p class="filter">
-                Filter
-            </p>
+                <p class="filter">Filter</p>
             </div>
             </form>        
     </div>
     <!-- Song Information includes Song Title Header in H2, followed by artist, album, genre -->
     <div id="songInfoBox"> 
 
-  <!--           <h2 class="songTitle">Song Name</h2>
-            <div class="songInfo"></div>
-        </div>
-        <div class="song">
-            <h2 class="songTitle">Song Name</h2>
-            <div class="songInfo"></div>
-        </div>
-        <div class="song">
-            <h2 class="songTitle">Song Name</h2>
-            <div class="songInfo"></div>
-        </div>
-        <div class="song">
-            <h2 class="songTitle">Song Name</h2>
-            <div class="songInfo"></div> -->
-        </div>
+    </div>                                            <!-- End songInfoBox -->
+    
+    <div id="addNew">
+        <label for="addSong">Song:</label>
+            <input type="text" name="addSong" id="addSong">
+        <label for="addArtist">Artist:</label>
+            <input type="text" name="addArtist" id="addArtist">
+        <label for="addAlbum">Album:</label>
+            <input type="text" name="addAlbum" id="addAlbum">
+        <button id="add">Add</button>
+    </div>                                             <!-- End of addNew Div -->
 
-    </div>
     </div> <!-- End of Container Div -->
     <script src="songs.js"></script>
 </body>
