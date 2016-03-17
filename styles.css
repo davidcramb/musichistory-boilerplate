@@ -33,15 +33,16 @@ nav {
 .formSelector {
     display: inline-flex;
     flex: 0 1 auto;
-    align-self: flex-start;
+    /*align-self: flex-start;*/
     order: 1;
     margin: 0 auto;
     background: #4DD7FA;
     border: 2px solid black;
     min-width: 180px;
-    padding: .5%;
     margin-right: .5%;
     margin-left: 1%;
+    padding: 1% 1%;
+    box-sizing: border-box;
     height: auto;
     width: 20%;
 }
@@ -50,6 +51,7 @@ nav {
     display: inline-flex;
     flex-direction: column;
     flex-shrink: 1;
+    box-sizing: border-box;
     order: 2;
     background: #FEFAC0;
     border: 2px solid black;
