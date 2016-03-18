@@ -20,6 +20,8 @@ function addSongtoBeginning (songarray, newSong, newArtist, newAlbum){
   songarray.unshift(newSong + ' - by ' + newArtist + ' on the album ' + newAlbum)
 }
 
+// (Regex practice) loops through existing song arrays to remove characters that don't belong.
+
 function removeCrap (crap) {
   songs = [];
   for (var i = 0; i < crap.length; i ++){
@@ -31,6 +33,7 @@ function removeCrap (crap) {
 };
 removeCrap(songs);
 
+// Writes the songs from the song array to the listMusicView DOM element
 function addSongsToDOM (songs) {
   var DOMOutput = document.getElementById('songInfoBox')
     for (let i in songs) {
@@ -43,9 +46,11 @@ function addSongsToDOM (songs) {
 addSongsToDOM(songs);
 
 // Code for event listeners and hides and shows the different views. Bad naming.
+// Adds the event listeners to the first two navbar links and hides/shows the List and Input views
 addMusicLink.addEventListener('click', function () {
-  hideMusicView(listMusicView)
+  hideMusicView(listMusicView);
   addMusicView(addMusicInput);
+  musicInput();
 });
 listMusicLink.addEventListener('click', function () {
   hideMusicView(addMusicInput);
@@ -57,6 +62,21 @@ let hideMusicView = view =>  {
 let addMusicView = view => {
   view.classList.remove('hidden'); view.classList.add('visible');
 };
+
+//This function is invoked in the addMusicLink Event Listener and its primary function
+//is to capture data from the user and add a new event listener on the Add button
+var musicInput = function () {
+  let DOMOutput = document.getElementById('songInfoBox')
+  let addButton = document.getElementById('add');
+  let addMusicInfo = (x) => {
+    let userSong = document.getElementById('addSong').value;
+    let userArtist = document.getElementById('addArtist').value; 
+    let userAlbum = document.getElementById('addAlbum').value;
+    DOMOutput.innerHTML += `<h2 class"songName">${userSong}</h2><div>${userSong} by ${userArtist} on the album ${userAlbum}`
+  };
+  addButton.addEventListener('click', addMusicInfo)
+}
+
 
 
 
