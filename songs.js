@@ -4,7 +4,9 @@ var songs = [];
 var addMusicLink = document.getElementById('addMusic');
 var listMusicView = document.getElementById('listMusicView');
 var addMusicInput = document.getElementById('addMusicView');
-var listMusicLink = document.getElementById('listMusic')
+var listMusicLink = document.getElementById('listMusic');
+var songInfoBox = document.getElementById('songInfoBox');
+
 
 songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
 songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
@@ -12,7 +14,7 @@ songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album Th
 songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction";
 songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
 
-function addSongtoEnd (songarray, newSong, newArtist, newAlbum) {
+function addSongToEnd (songarray, newSong, newArtist, newAlbum) {
   songarray.push(newSong + ' - by ' + newArtist + ' on the album ' + newAlbum)
 };
 
@@ -28,7 +30,7 @@ function removeCrap (crap) {
     var replaced = crap[i].replace(/[!@##$%^&*()]/g,"").replace(/[>]/g,"-");
     songs.push(replaced);
   };
-  addSongtoEnd(songs, "Bridge", "Red Hot Chili Peppers", "Californication");
+  addSongToEnd(songs, "Bridge", "Red Hot Chili Peppers", "Californication");
   addSongtoBeginning(songs, "Breathe", "The Prodigy", "Fat of the Land");
 };
 removeCrap(songs);
@@ -40,7 +42,7 @@ function addSongsToDOM (songs) {
       var songTitle = songs[i].split(" - ")[0];
       console.log(songTitle)
       DOMOutput.innerHTML += `<h2 class="songName">${songTitle}</h2>`;
-      DOMOutput.innerHTML += `${songs[i]}`;
+      DOMOutput.innerHTML += `<div>${songs[i]}</div>`;
     };
 };
 addSongsToDOM(songs);
@@ -66,16 +68,23 @@ let addMusicView = view => {
 //This function is invoked in the addMusicLink Event Listener and its primary function
 //is to capture data from the user and add a new event listener on the Add button
 var musicInput = function () {
-  let DOMOutput = document.getElementById('songInfoBox')
   let addButton = document.getElementById('add');
-  let addMusicInfo = (x) => {
-    let userSong = document.getElementById('addSong').value;
-    let userArtist = document.getElementById('addArtist').value; 
-    let userAlbum = document.getElementById('addAlbum').value;
-    DOMOutput.innerHTML += `<h2 class"songName">${userSong}</h2><div>${userSong} by ${userArtist} on the album ${userAlbum}`
-  };
   addButton.addEventListener('click', addMusicInfo)
-}
+};
+
+let addMusicInfo = () => {
+  console.log('hi')
+  let DOMOutput = songInfoBox;
+  let userSong = document.getElementById('addSong').value;
+  let userArtist = document.getElementById('addArtist').value; 
+  let userAlbum = document.getElementById('addAlbum').value;
+
+    let newItemText = `<h2 class="songName">${userSong}</h2><div>${userSong} by ${userArtist} on the album ${userAlbum}</div>`;
+    console.log(newItemText)
+    DOMOutput.innerHTML += newItemText
+
+};
+
 
 
 
