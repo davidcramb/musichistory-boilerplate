@@ -43,7 +43,7 @@ let addMusicInfo = () => {
   let userAlbum = document.getElementById('addAlbum').value;
 
     let newItemText = `<h2 class="songName">${userSong}</h2><div>${userSong} by ${userArtist} on the album ${userAlbum}</div>`;
-    console.log(newItemText)
+
     DOMOutput.innerHTML += newItemText
 
 };
