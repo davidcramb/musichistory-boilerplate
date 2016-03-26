@@ -1,0 +1,41 @@
+{
+  "music" : [
+
+  {
+    "song": "Breathe" ,
+    "artist": "The Prodigy",
+    "album": "The Fat of the Land" 
+  },
+  {
+    "song": "Legs" ,
+    "artist": "ZZTop",
+    "album": "Eliminator" 
+  },
+  {
+    "song": "The Logical Song",
+    "artist": "Supertramp",
+    "album":  "Breakfast in America"
+  },
+  {
+    "song": "Another Brick in the Wall",
+    "artist": "Pink Floyd",
+    "album":  "The Wall"
+  },
+  {
+    "song": "Welcome to the Jungle",
+    "artist": "Guns & Roses",
+    "album": "Appetite for Destruction"
+  },
+  {
+    "song": "Ironic",
+    "artist": "Alanis Morisette",
+    "album":  "Jagged Little Pill"
+  },
+  {
+    "song": "Bridge" ,
+    "artist": "Red Hot Chili Peppers",
+    "album": "Californication"
+  }
+
+  ]
+}
