@@ -1,25 +1,26 @@
 "use strict";
 
-var songs = [];
 var addMusicLink = document.getElementById('addMusic');
 var listMusicView = document.getElementById('listMusicView');
 var addMusicInput = document.getElementById('addMusicView');
 var listMusicLink = document.getElementById('listMusic');
 var songInfoBox = document.getElementById('songInfoBox');
 let XHRmusiclist01 = new XMLHttpRequest ();
+let XHRmusiclist02 = new XMLHttpRequest ();
 
-// Code for event listeners and hides and shows the different views. Bad naming.
+// Adds event listeners and hides and shows the different views. Bad naming.
 // Adds the event listeners to the first two navbar links and hides/shows the List and Input views
 addMusicLink.addEventListener('click', function () {
   hideMusicView(listMusicView);
   addMusicView(addMusicInput);
   musicInput();
-
 });
+
 listMusicLink.addEventListener('click', function () {
   hideMusicView(addMusicInput);
   addMusicView(listMusicView);
 });
+
 
 let hideMusicView = view =>  {
   view.classList.remove('visible'); view.classList.add('hidden'); 
@@ -36,34 +37,43 @@ var musicInput = function () {
 };
 
 let addMusicInfo = () => {
-  console.log('hi')
   let DOMOutput = songInfoBox;
   let userSong = document.getElementById('addSong').value;
   let userArtist = document.getElementById('addArtist').value; 
   let userAlbum = document.getElementById('addAlbum').value;
-
-    let newItemText = `<h2 class="songName">${userSong}</h2><div>${userSong} by ${userArtist} on the album ${userAlbum}</div>`;
-
-    DOMOutput.innerHTML += newItemText
-
+  let newItemText = `<h2 class="songName">${userSong}</h2><div>${userSong} by ${userArtist} on the album ${userAlbum}</div>`;
+  DOMOutput.innerHTML += newItemText
 };
 
 
-let loadJSON = () => {
+let loadJSON01 = () => {
 
   XHRmusiclist01.open('GET', 'musiclist01.JSON');
   XHRmusiclist01.send();
   XHRmusiclist01.addEventListener('load', JSONparseData);
-  XHRmusiclist01.addEventListener('error', JSONerror); 
+  XHRmusiclist01.addEventListener('error', loadJSONerror); 
 
-  function JSONparseData (callback) {
+};
+
+let loadJSON02 = () => {
+
+  XHRmusiclist02.open('GET', 'musiclist02.JSON');
+  XHRmusiclist02.send();
+  XHRmusiclist02.addEventListener('load', JSONparseData);
+  XHRmusiclist02.addEventListener('error', loadJSONerror);
+};
+
+function JSONparseData (callback) {
+    let songs = [];
     let data = JSON.parse(this.responseText);
     songs.push(data.music);
+    console.log(songs)
     addSongsToDOM(songs);
-  }
+};
 
-}
-let JSONerror = (xhrEvent) => console.log("an error has occured loading the JSON file");
+
+
+let loadJSONerror = (xhrEvent) => console.log("an error has occured loading the JSON file");
 
 function addSongsToDOM (songs) {
 
@@ -74,10 +84,25 @@ function addSongsToDOM (songs) {
       songTitle = songs[0][i].song;
       artist = songs[0][i].artist;
       album = songs[0][i].album;
-      DOMOutput.innerHTML += `<h2 class="songName">${songTitle}</h2>`;
-      DOMOutput.innerHTML += `<div>${songTitle} by ${artist} on the album ${album}`;
-    };
+      DOMOutput.innerHTML += `<div class='musicRow'>
+                              <h2 class="songName">${songTitle}</h2>
+                              <div>${songTitle} by ${artist} on the album ${album}
+                              <button class='delete'>Delete</button></div>`;
+  };
+    let moreButton = document.getElementById('more');
+    songInfoBox.addEventListener('click', deleteRow);
+    moreButton.addEventListener('click', loadJSON02);
 };
-loadJSON();
+
+let deleteRow = (e) => {
+  if (e.target.classList.contains('delete')){
+    let rowToDelete = e.target.parentNode.parentNode;
+    e.currentTarget.removeChild(rowToDelete);
+
+  }
+}
+loadJSON01();
+
+
 
 

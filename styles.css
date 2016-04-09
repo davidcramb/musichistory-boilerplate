@@ -1,6 +1,7 @@
 
 
 body {
+
     font-family: 'Arial', sans-serif;
     font-size: .85em;
     margin-left: auto;
@@ -60,6 +61,13 @@ nav {
     width: 72%;
     height: auto;
 }
+
+#more {
+    order: 3;
+    align-content: flex-end;
+    width: 25%;
+    margin-left: 60%;
+}
 .song {
 
 }
@@ -118,6 +126,11 @@ nav {
 }
 #addMusicView input {
     margin: 0 2% auto;
+}
+.delete {
+    align-content: flex-end;
+    width: 10%;
+    margin-left: 60%;
 }
 
 /**CONTROLS HIDDEN AND VISIBLE ELEMENTS **/

@@ -1,0 +1,41 @@
+{
+  "music" : [
+
+  {
+    "song": "Creep" ,
+    "artist": "Radiohead",
+    "album": "Creep" 
+  },
+  {
+    "song": "Daughter" ,
+    "artist": "Pearl Jam",
+    "album": "Vs." 
+  },
+  {
+    "song": "Wicked Garden",
+    "artist": "Stone Temple Pilots",
+    "album":  "Single: Wicked Garden"
+  },
+  {
+    "song": "Black Hole Sun",
+    "artist": "Soundgarden",
+    "album":  "A-Sides"
+  },
+  {
+    "song": "Dirty Deeds Done Dirt Cheap",
+    "artist": "AC/DC",
+    "album": "Dirty Deeds Done Dirt Cheap"
+  },
+  {
+    "song": "Ironic",
+    "artist": "Alanis Morisette",
+    "album":  "Jagged Little Pill"
+  },
+  {
+    "song": "Blah Blah Blah" ,
+    "artist": "Bob Loblaw",
+    "album": "Bob Loblaw's Law Blog"
+  }
+
+  ]
+}
