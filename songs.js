@@ -37,12 +37,13 @@ var musicInput = function () {
 };
 
 let addMusicInfo = () => {
-  let DOMOutput = songInfoBox;
-  let userSong = document.getElementById('addSong').value;
-  let userArtist = document.getElementById('addArtist').value; 
-  let userAlbum = document.getElementById('addAlbum').value;
-  let newItemText = `<h2 class="songName">${userSong}</h2><div>${userSong} by ${userArtist} on the album ${userAlbum}</div>`;
-  DOMOutput.innerHTML += newItemText
+  var song = [];
+  var userSong = [{'song':'','artist':'','album':''}];
+  userSong[0].song =  document.getElementById('addSong').value;
+  userSong[0].artist = document.getElementById('addArtist').value; 
+  userSong[0].album = document.getElementById('addAlbum').value;
+  song.push(userSong);
+  addSongsToDOM(song)
 };
 
 
@@ -67,7 +68,7 @@ function JSONparseData (callback) {
     let songs = [];
     let data = JSON.parse(this.responseText);
     songs.push(data.music);
-    console.log(songs)
+
     addSongsToDOM(songs);
 };
 
@@ -79,7 +80,7 @@ function addSongsToDOM (songs) {
 
   let songTitle, artist, album;
   let DOMOutput = document.getElementById('songInfoBox');
-  
+  console.log(songs)
   for (let i = 0; i < songs[0].length; i++) {
       songTitle = songs[0][i].song;
       artist = songs[0][i].artist;
@@ -90,8 +91,8 @@ function addSongsToDOM (songs) {
                               <button class='delete'>Delete</button></div>`;
   };
     let moreButton = document.getElementById('more');
-    songInfoBox.addEventListener('click', deleteRow);
     moreButton.addEventListener('click', loadJSON02);
+    songInfoBox.addEventListener('click', deleteRow);
 };
 
 let deleteRow = (e) => {
