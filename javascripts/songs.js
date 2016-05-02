@@ -12,8 +12,8 @@ let addMusicInfo = () => {
   var song = {'music':[]};
   var userSong = [{'song':'','artist':'','album':''}];
   if (!$('#addSong').val() || !$('#addArtist').val() || !$('#addAlbum').val()) {
-    alert('no empty inputs plz')
-    return
+    alert('no empty inputs plz');
+    return;
   }
   userSong[0].song =  $('#addSong').val();
   userSong[0].artist = $('#addArtist').val();
