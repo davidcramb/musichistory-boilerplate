@@ -3,20 +3,22 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
-<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="./css/main.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 
 <body>
-    <div id="container">
-    <nav>
+    <div id="container" class="container">
+    <nav class="navbar-fixed-top">
         <ul>
             <li><a href="#" id="listMusic">List Music</a></li>
             <li><a href="#" id="addMusic">Add Music</a></li>
             <li><a href="#">Profile</a></li>
         </ul>
     </nav>
-    <div id="listMusicView" class="visible">
-    <div class="formSelector"> 
+
+    <section id="listMusicView" class="row visible">
+    <div class="col-md-2 formSelector"> 
         <form action=" ">
 
             <div class="songLength">
@@ -33,17 +35,17 @@
                 <input type="select">
             </div>                                   <!--End of dropDown -->
 
-            <div class="checkBox">
-                <div class="checkBoxLabel">
+            <div class="check_box">
+                <div class="check_box-Label">
                     <label for="genre">Genre:</label>
                 </div>
                 <br>
-                <div class="checkBoxLeft">
+                <div class="check_box-Left">
                     <input type="checkbox">Rock <br>
                     <input type="checkbox">Pop <br>
                     <input type="checkbox">Blues <br>
                 </div>
-                <div class="checkBoxRight">
+                <div class="check_box-Right">
                     <input type="checkbox">Classical<br>
                     <input type="checkbox">Hip hop <br>
                     <input type="checkbox">Jazz <br>
@@ -56,12 +58,12 @@
             </form>        
     </div>
     <!-- Song Information includes Song Title Header in H2, followed by artist, album, genre -->
-    <div id="songInfoBox"> 
+    <div id="songInfoBox" class="col-md-10"> 
         <button id="more">More > </button>
     </div>                                            <!-- End songInfoBox -->
-    </div>                                            <!-- End listMusicView -->
+    </section>                                            <!-- End listMusicView -->
     
-    <div id="addMusicView" class="hidden">
+    <div id="addMusicView" class="">
         <label for="addSong">Song:</label>
             <input type="text" name="addSong" id="addSong" value="TITLE">
         <label for="addArtist">Artist:</label>

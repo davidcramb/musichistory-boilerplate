@@ -5,8 +5,9 @@
   "main": "gulpfile.js",
   "dependencies": {
     "gulp": "^3.9.1",
-    "jshint-stylish": "^2.1.0",
-    "gulp-watch": "^4.3.5"
+    "gulp-sass": "^2.3.1",
+    "gulp-watch": "^4.3.5",
+    "jshint-stylish": "^2.1.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -16,10 +17,14 @@
     "type": "git",
     "url": "git+https://github.com/davidcramb/musichistory-boilerplate.git"
   },
-  "author": "",
+  "author": "david",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/davidcramb/musichistory-boilerplate/issues"
   },
-  "homepage": "https://github.com/davidcramb/musichistory-boilerplate#readme"
+  "homepage": "https://github.com/davidcramb/musichistory-boilerplate#readme",
+  "keywords": [
+    "music",
+    "history"
+  ]
 }
