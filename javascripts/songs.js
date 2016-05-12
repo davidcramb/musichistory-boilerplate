@@ -32,8 +32,16 @@ let addMusicInfo = () => {
 };
 let deleteRow = (e) => {
   let rowToDelete = ($(event)[0].target.parentNode.parentNode);
+  $(rowToDelete).animate({
+    opacity: 0.10,
+    left: "+=500px",
+  }, 1000, function() {
+
   $('#songInfoBox')[0].removeChild(rowToDelete);
-};
+  })
+  };
+
+
 $.ajax({
   url: 'musiclist01.JSON',
   }).done(function(songs){
@@ -51,8 +59,8 @@ $('#addMusic').click(function() {
   $('#addMusicView').fadeIn();
 });
 $('#listMusic').click(function(){
-  $('#listMusicView').fadeIn();
   $('#addMusicView').fadeOut();
+  $('#listMusicView').fadeIn();
 });
 $('#add').click(addMusicInfo);
 $('#songInfoBox').on('click', '.delete', deleteRow);
