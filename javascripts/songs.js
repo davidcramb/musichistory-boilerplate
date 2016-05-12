@@ -1,11 +1,17 @@
 "use strict";
 $(document).ready(function() {
+
+var hideAddMusicView = function () {
+  $('#addMusicView').hide();
+};
+hideAddMusicView();
+
 function addSongsToDOM (songs) {
   $(songs.music).each(function(index, data){
     $('#songInfoBox').append(`<div class='musicRow'>
-                              <h2 class="songName">${data.song}</h2>
-                              <div>${data.song} by ${data.artist} on the album ${data.album}
-                              <button class='delete'>Delete</button></div>`);
+                              <h2 class="songName"><span class="btn delete">X</span>${data.song}</h2>
+                              <div class="songData">${data.song} by ${data.artist} on the album ${data.album}
+                              </div>`);
   });
 }
 let addMusicInfo = () => {
@@ -21,7 +27,7 @@ let addMusicInfo = () => {
   song.music = userSong;
     $('input[type="text"]').each(function(index, input) {
     input.value = '';
-    })
+    });
   addSongsToDOM(song);
 };
 let deleteRow = (e) => {
@@ -41,12 +47,12 @@ $('#more').click(function () {
   });
 });
 $('#addMusic').click(function() {
-  $('#listMusicView').hide();
-  $('#addMusicView').show();
+  $('#listMusicView').fadeOut();
+  $('#addMusicView').fadeIn();
 });
 $('#listMusic').click(function(){
-  $('#listMusicView').show();
-  $('#addMusicView').hide();
+  $('#listMusicView').fadeIn();
+  $('#addMusicView').fadeOut();
 });
 $('#add').click(addMusicInfo);
 $('#songInfoBox').on('click', '.delete', deleteRow);

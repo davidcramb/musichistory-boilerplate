@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
-<link rel="stylesheet" type="text/css" href="./css/main.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 
 <body>
     <div id="container" class="container">
-    <nav class="navbar-fixed-top">
-        <ul>
-            <li><a href="#" id="listMusic">List Music</a></li>
-            <li><a href="#" id="addMusic">Add Music</a></li>
-            <li><a href="#">Profile</a></li>
+    <nav class="navbar-inverse navbar-fixed-top">
+        <ul class="nav nav-justified">
+            <li role="presentation"><a href="#" id="listMusic">List Music</a></li>
+            <li role="presentation"><a href="#" id="addMusic">Add Music</a></li>
+            <li role="presentation"><a href="#">Profile</a></li>
         </ul>
     </nav>
 
     <section id="listMusicView" class="row visible">
-    <div class="col-md-2 formSelector"> 
+    <div class="col-md-3 formSelector"> 
         <form action=" ">
 
             <div class="songLength">
@@ -40,15 +40,17 @@
                     <label for="genre">Genre:</label>
                 </div>
                 <br>
-                <div class="check_box-Left">
-                    <input type="checkbox">Rock <br>
-                    <input type="checkbox">Pop <br>
-                    <input type="checkbox">Blues <br>
-                </div>
-                <div class="check_box-Right">
-                    <input type="checkbox">Classical<br>
-                    <input type="checkbox">Hip hop <br>
-                    <input type="checkbox">Jazz <br>
+                <div class="row">
+                    <div class="check_box-Left col-md-6">
+                        <input type="checkbox">Rock <br>
+                        <input type="checkbox">Pop <br>
+                        <input type="checkbox">Blues <br>
+                    </div>
+                    <div class="check_box-Right col-md-6">
+                        <input type="checkbox">Classical<br>
+                        <input type="checkbox">Hip hop <br>
+                        <input type="checkbox">Jazz <br>
+                    </div>
                 </div>
             </div>                                    <!--End of checkBox-->
 
@@ -58,19 +60,19 @@
             </form>        
     </div>
     <!-- Song Information includes Song Title Header in H2, followed by artist, album, genre -->
-    <div id="songInfoBox" class="col-md-10"> 
-        <button id="more">More > </button>
+    <div id="songInfoBox" class="col-md-9"> 
+        <button id="more" class="btn btn-primary">More > </button>
     </div>                                            <!-- End songInfoBox -->
     </section>                                            <!-- End listMusicView -->
     
-    <div id="addMusicView" class="">
+    <div id="addMusicView">
         <label for="addSong">Song:</label>
             <input type="text" name="addSong" id="addSong" value="TITLE">
         <label for="addArtist">Artist:</label>
             <input type="text" name="addArtist" id="addArtist" value="ARTIST">
         <label for="addAlbum">Album:</label>
             <input type="text" name="addAlbum" id="addAlbum" value="ALBUM">
-        <button id="add">Add</button>
+        <button id="add" class="btn">Add</button>
     </div>                                             <!-- End of addMusicView Div -->
 
     </div> <!-- End of Container Div -->

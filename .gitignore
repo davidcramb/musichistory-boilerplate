@@ -2,3 +2,4 @@ bower_components
 node_modules
 gulpfile.js
 .jshintrc
+.sass-cache

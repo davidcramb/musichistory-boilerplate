@@ -1,0 +1,101 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0D3562;
+  margin: 0 auto;
+  padding-top: 70px; }
+
+#songInfoBox, .formSelector, #filter {
+  border: 2px solid black; }
+
+nav {
+  background: #FFB4B0;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px; }
+  nav li {
+    list-style-type: none;
+    float: left;
+    border-right: 5px;
+    margin: 6px 10px 2px 5px; }
+
+section #listmusicview {
+  display: flex;
+  margin-top: 2%; }
+
+#songInfoBox {
+  background-color: #BA750B;
+  display: inline-flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  box-sizing: border-box;
+  order: 2;
+  padding: 0 0 20px 20px;
+  margin-left: 2%;
+  height: auto;
+  width: 72%; }
+
+.visible {
+  display: block; }
+
+.hidden {
+  display: none; }
+
+.songData {
+  padding-left: 8%;
+  color: #EAEADC; }
+
+.delete {
+  background-color: #692500;
+  color: #EB5302;
+  margin-right: 2%; }
+
+#more {
+  order: 3;
+  background-color: #694000;
+  align-content: flex-end;
+  width: 25%;
+  margin-left: 60%; }
+
+#addMusicView {
+  color: #EAEADC;
+  margin: 5%; }
+  #addMusicView .btn {
+    background-color: #0D4F99;
+    color: #EAEADC; }
+  #addMusicView input {
+    margin: 0 2% auto; }
+
+.formSelector {
+  display: inline-flex;
+  order: 1;
+  margin: 0 auto;
+  background: #056347;
+  color: #EAEADC;
+  min-width: 180px;
+  margin-right: .5%;
+  padding: 1% 1%;
+  box-sizing: border-box;
+  height: auto;
+  width: 20%; }
+
+.check_box {
+  margin-top: 10px;
+  font-size: .85em; }
+  .check_box-Label {
+    margin-top: 15px;
+    margin-bottom: 5px; }
+
+.dropDown input {
+  display: block;
+  margin-bottom: 3px;
+  width: 95%; }
+
+#filter {
+  text-align: center;
+  width: 100px;
+  background-color: #077B58;
+  border-radius: 5px; }
+  #filterbutton {
+    clear: both;
+    margin: 1% 5% auto; }
